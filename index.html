@@ -8,6 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+
+    <!--Bootstrap Javascript-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!--Custom Script-->
+    <script src="./js/script.js"></script>
+
     <title>Academy Cinema</title>
   </head>
   <body>
@@ -140,6 +149,60 @@
       </div>
       <!--END OF SHOWTIMES-->
 
+      <!--JUMBOTRON-->
+      <div class="jumbotron jumbotron-fluid bg-info mt-5 text-light text-center">
+        <div class="container">
+          <h1 id='movie-deals' class="display-4 hidden-sm-down">Movie Deals</h1>
+          <p class="lead">Check out our monthly deals...</p>
+          <!--movie deals-->
+          <button class='btn btn-light btn-outline-primary' type="button" data-toggle="modal" data-target="#register">Register</button>
+          <!--/movie deals-->
+        </div>
+      </div>
+      <!--/JUMBOTRON-->
+      
+    
+      <!--FORM MODAL-->
+      <div id='register' class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Register to receive movie deals</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!--modal form-->
+              <form>
+                <fieldset class="form-group">
+                  <label for="firstName">First Name:</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="lastname">Last Name:</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="email">Email Address:</label>
+                  <input type="text" class="form-control" id="email" placeholder="Email Address">
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="text" class="form-control" id="password" placeholder="Password">
+                </fieldset>
+              </form>
+              <!--/modal form-->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/FORM MODAL-->
+
       <!--FORM-->
       <div class="container text-center" id='deals'>
         <a class="anchor" id="deals-anchor"></a>
@@ -149,7 +212,9 @@
           <div class="form-group">
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Submit your email to receive great movie reward deals.">
+            Sign up!
+          </button>
         </form>
       </div>
       <!--END FORM-->
